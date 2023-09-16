@@ -7,11 +7,11 @@ android {
     compileSdk = 33
 
     defaultConfig {
-        applicationId = "com.example.companionapp1"
+        applicationId = "com.watchfacestudio.militaryf01"
         minSdk = 28
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
-        versionName = "1.0"
+        versionName = "0.0.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }

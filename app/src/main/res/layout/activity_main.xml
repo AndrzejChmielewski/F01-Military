@@ -12,10 +12,10 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:text="This watch face companion app was created for you to easily find and download watch faces for your watch device. Wear OS API 30+"
-        android:textSize="18sp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="16dp"/>
+
+        android:textSize="18sp" />
 
     <Button
         android:layout_width="wrap_content"
@@ -24,4 +24,16 @@
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
         android:id="@+id/storeButton"/>
+
+    <TextView
+        android:layout_marginTop="16dp"
+        android:id="@+id/otherTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/storeButton"
+        android:layout_centerHorizontal="true"
+        android:text="NOTE: If you bought the app by mistake, need assistance, or have any questions, please contact us at Mail@mail.pl."
+        android:textSize="16sp" />
+
+
 </RelativeLayout>
