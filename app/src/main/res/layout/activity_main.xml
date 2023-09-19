@@ -6,6 +6,14 @@
     android:layout_height="match_parent"
     android:padding="16dp"
     tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/backgroundImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/6656532" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -13,9 +21,9 @@
         android:layout_marginTop="16dp"
         android:text="This watch face companion app was created for you to easily find and download watch faces for your watch device. Wear OS API 30+"
         android:textSize="18sp"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/storeButton"
@@ -24,10 +32,10 @@
         android:layout_marginTop="16dp"
         android:text="Install Now"
         android:textColor="#FFFFFF"
-    android:backgroundTint="#FF5722"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/textView" />
+        android:backgroundTint="#FF5722"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
         android:id="@+id/otherTextView"
@@ -36,10 +44,9 @@
         android:layout_marginTop="16dp"
         android:text="NOTE: If you bought the app by mistake, need assistance, or have any questions, please contact us at Mail@mail.pl."
         android:textSize="16sp"
-
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/storeButton" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/storeButton" />
 
     <ImageView
         android:id="@+id/imageView"

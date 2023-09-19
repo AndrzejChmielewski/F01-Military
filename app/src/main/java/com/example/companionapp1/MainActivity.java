@@ -20,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
         // Set a click listener for the button
         storeButton.setOnClickListener(new View.OnClickListener() {
             @Override
+
+
             public void onClick(View v) {
                 // Define the URL of your store and create an Intent to open it
                 String storeUrl = "YOUR_STORE_URL_HERE"; // Replace with your store URL
@@ -27,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
                 // Start the activity to open the store link
                 startActivity(intent);
+
             }
         });
     }
