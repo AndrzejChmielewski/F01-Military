@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
             public void onClick(View v) {
                 // Define the URL of your store and create an Intent to open it
-                String storeUrl = "YOUR_STORE_URL_HERE"; // Replace with your store URL
+                String storeUrl = "https://play.google.com/store/apps/dev?id=4887226526184134400"; // Replace with your store URL
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(storeUrl));
 
                 // Start the activity to open the store link

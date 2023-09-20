@@ -13,6 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "CompanionApp1"
+rootProject.name = "Military Watch Face - F01"
 include(":app")
  
