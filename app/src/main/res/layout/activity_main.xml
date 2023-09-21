@@ -36,7 +36,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="NOTE: If you bought the app by mistake, need assistance, or have any questions, please contact us at Mail@mail.pl."
+        android:text="NOTE: If you bought the app by mistake, need assistance, or have any questions, please contact us at ArtistryTimeStudios@gmail.com."
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
