@@ -1,6 +1,7 @@
 package com.example.companionapp1;
 
 import androidx.appcompat.app.AppCompatActivity;
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -22,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Define the URL of your installation guide and create an Intent to open it
-                String guideUrl = "https://your-installation-guide-url.com"; // Replace with your installation guide URL
+                String guideUrl = "https://tinyurl.com/4p9rcmww"; // Replace with your installation guide URL
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(guideUrl));
 
                 // Start the activity to open the installation guide link
@@ -38,11 +39,34 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Define the URL of your store and create an Intent to open it
-                String storeUrl = "https://docs.google.com/document/d/e/2PACX-1vQZheo56qNTpMBpS3zoCIuq3EhaZRPM2Y0JXf2OqJD8YqYt1kZk8bArWVtSW0qumt6b57zShJUxwu9a/pub"; // Replace with your store URL
+                String storeUrl = "https://play.google.com/store/apps/dev?id=4887226526184134400"; // Replace with your store URL
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(storeUrl));
 
                 // Start the activity to open the store link
                 startActivity(intent);
+            }
+        });
+
+        // Find the "Rate App" button by its ID
+        Button rateButton = findViewById(R.id.rateButton);
+
+        // Set a click listener for the "Rate App" button
+        rateButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Define the URL of your app on Google Play for rating
+                String appUrl = "https://play.google.com/store/apps/details?id=com.watchfacestudio.militaryf01"; // Replace with your app's package name
+
+                // Create an Intent to open the app's page on Google Play
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(appUrl));
+
+                // Try to open the Google Play app; if not available, open the Play Store website
+                try {
+                    startActivity(intent);
+                } catch (ActivityNotFoundException e) {
+                    intent.setData(Uri.parse("https://play.google.com/store/apps/details?id=com.watchfacestudio.militaryf01"));
+                    startActivity(intent);
+                }
             }
         });
     }

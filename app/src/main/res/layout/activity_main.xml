@@ -1,18 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    tools:ignore="ExtraText">
 
+    <!-- Guideline to align buttons horizontally -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
+        android:animateLayoutChanges="true"
         android:text="This watch face companion app was created for you to easily find and download watch faces for your watch device. Wear OS API 30+"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,36 +33,70 @@
         android:id="@+id/storeButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#FF5722"
         android:text="Google Play Store"
         android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/textView" /> <!-- Updated constraint -->
+    android:layout_marginTop="16dp"
+    android:onClick="openPlayStore"
+    android:stateListAnimator="@null"/>
+
+    <Button
+        android:id="@+id/rateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
         android:backgroundTint="#FF5722"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        android:text="Rate App"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/textView" /> <!-- Updated constraint -->
+    android:layout_marginTop="16dp"
+    android:onClick="openPlayStore"
+    android:stateListAnimator="@null"/>
 
     <TextView
         android:id="@+id/otherTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="NOTE: If you bought the app by mistake, need assistance, or have any questions, please contact us at ArtistryTimeStudios@gmail.com."
+        android:layout_marginTop="24dp"
+        android:animateLayoutChanges="true"
+        android:text="NOTE: If you bought the app by mistake, need assistance, or have any questions"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/storeButton" />
 
+    <TextView
+        android:id="@+id/emailTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:animateLayoutChanges="true"
+        android:autoLink="email"
+        android:clickable="true"
+        android:minHeight="48dp"
+        android:onClick="sendEmail"
+        android:text="Please contact us at: ArtistryTimeStudios@gmail.com"
+        android:textColorLink="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/otherTextView" />
+
     <Button
         android:id="@+id/guideButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:onClick="openInstallationGuide"
+        android:stateListAnimator="@null"
         android:text="Installation Guide"
-         android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/otherTextView"/>
-
-
+        app:layout_constraintTop_toBottomOf="@+id/emailTextView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
