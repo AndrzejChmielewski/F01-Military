@@ -1,4 +1,4 @@
-package com.example.companionapp1;
+package com.example.militaryf01;
 
 import android.content.Context;
 
