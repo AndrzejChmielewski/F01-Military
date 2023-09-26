@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:animateLayoutChanges="true"
-        android:text="This watch face companion app was created for you to easily find and download watch faces for your watch device. Wear OS API 30+"
+        android:text="This watch face companion app was created for you to easily find and download watch faces for your watch device. Wear OS API 28+"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
