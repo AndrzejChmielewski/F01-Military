@@ -38,11 +38,10 @@
         android:backgroundTint="#FF5722"
         android:text="Google Play Store"
         android:textColor="#FFFFFF"
+        android:onClick="openPlayStore"
+        android:stateListAnimator="@null"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/textView" /> <!-- Updated constraint -->
-    android:layout_marginTop="16dp"
-    android:onClick="openPlayStore"
-    android:stateListAnimator="@null"/>
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
         android:id="@+id/rateButton"
@@ -53,11 +52,10 @@
         android:backgroundTint="#FF5722"
         android:text="Rate App"
         android:textColor="#FFFFFF"
+        android:onClick="openPlayStore"
+        android:stateListAnimator="@null"
         app:layout_constraintStart_toEndOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/textView" /> <!-- Updated constraint -->
-    android:layout_marginTop="16dp"
-    android:onClick="openPlayStore"
-    android:stateListAnimator="@null"/>
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
         android:id="@+id/otherTextView"

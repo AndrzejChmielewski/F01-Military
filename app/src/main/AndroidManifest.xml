@@ -1,26 +1,48 @@
-<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Place this <queries> tag inside your <manifest> tag in AndroidManifest.xml,
+  usually right before the <application> tag.
+-->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.militaryf01">
+
+    <!--
+      This <queries> block is necessary for Android 11 (API 30) and above.
+      It declares that your app intends to interact with other apps that can handle
+      web URLs and email, preventing crashes and ensuring the intents work correctly.
+    -->
+    <queries>
+        <!-- Intent to open web pages (for Play Store, guides, etc.) -->
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.BROWSABLE" />
+            <data android:scheme="https" />
+        </intent>
+
+        <!-- Intent to send an email -->
+        <intent>
+            <action android:name="android.intent.action.SENDTO" />
+            <data android:scheme="mailto" />
+        </intent>
+    </queries>
 
     <application
         android:allowBackup="true"
-        android:dataExtractionRules="@xml/data_extraction_rules"
-        android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.CompanionApp1"
-        tools:targetApi="31">
+        android:theme="@style/Theme.MilitaryF01">
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>
